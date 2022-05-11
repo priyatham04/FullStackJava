@@ -1,0 +1,14 @@
+class Solution {
+    public int climbStairs(int n) {
+        
+        int last =1,secondLast =1;
+        int sum =1;
+        
+        for(int i=2;i<=n;i++){  
+            sum = last + secondLast;
+            last = secondLast;
+            secondLast = sum;    
+        }
+        return sum;
+    }
+}
